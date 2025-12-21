@@ -6,7 +6,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-	<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/retail</property>
+	<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/journal_db</property>
 	<property name="hibernate.connection.username">postgres</property>
 	<property name="hibernate.connection.password">postgres</property>
 
@@ -28,10 +28,13 @@
         <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- List of annotated entity classes -->
-        <mapping class="com.college.Logistika"/>
-	<mapping class="com.college.Magazin"/>
-	<mapping class="com.college.Postachalnik"/>
-	<mapping class="com.college.Orders"/>
-	<mapping class="com.college.Partiya"/>
+        <mapping class="com.college.ArticleEntity"/>
+	<mapping class="com.college.CategoryEntity"/>
+	<mapping class="com.college.EditorEntity"/>
+	<mapping class="com.college.EditorialOfficeEntity"/>
+	<mapping class="com.college.JournalistEntity"/>
+	<mapping class="com.college.ReaderEntity"/>
+
+
     </session-factory>
 </hibernate-configuration>
