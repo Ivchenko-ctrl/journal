@@ -1,46 +1,40 @@
 package com.college.dto;
 
-import javax.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class ArticleInfoDTO {
-    public final String journalist;
-    public final String editor;
-    public final String reader;
-    public final LocalDate publicationDate;
-    public final String articleTitle;
-    public final String category;
-    public final String editorComments;
-    public final BigDecimal rating;
-    public final String editorialAddress;
-    public final String editorialPhone;
+
+    private String journalist;
+    private String editor;
+    private LocalDate publicationDate;
+    private String title;
+    private String category;
+    private String editorComments;
+    private BigDecimal rating;
+    private String address;
+    private String phone;
 
     public ArticleInfoDTO(
             String journalist,
             String editor,
-            String reader,
             LocalDate publicationDate,
-            String articleTitle,
+            String title,
             String category,
             String editorComments,
             BigDecimal rating,
-            String editorialAddress,
-            String editorialPhone
+            String address,
+            String phone
     ) {
         this.journalist = journalist;
         this.editor = editor;
-        this.reader = reader;
         this.publicationDate = publicationDate;
-        this.articleTitle = articleTitle;
+        this.title = title;
         this.category = category;
         this.editorComments = editorComments;
         this.rating = rating;
-        this.editorialAddress = editorialAddress;
-        this.editorialPhone = editorialPhone;
+        this.address = address;
+        this.phone = phone;
     }
 
     @Override
@@ -48,14 +42,13 @@ public class ArticleInfoDTO {
         return "ArticleInfoDTO{" +
                 "journalist='" + journalist + '\'' +
                 ", editor='" + editor + '\'' +
-                ", reader='" + reader + '\'' +
                 ", publicationDate=" + publicationDate +
-                ", articleTitle='" + articleTitle + '\'' +
+                ", title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", editorComments='" + editorComments + '\'' +
                 ", rating=" + rating +
-                ", editorialAddress='" + editorialAddress + '\'' +
-                ", editorialPhone='" + editorialPhone + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }
